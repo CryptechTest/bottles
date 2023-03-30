@@ -197,6 +197,7 @@ bottles.register_filled_bottle({
   sound = "default_water_footstep",
   name = "bottle_of_water",
   description = "Bottle of Water",
+  groups = {food_water = 1},
 })
 
 bottles.register_filled_bottle({
@@ -204,6 +205,7 @@ bottles.register_filled_bottle({
   sound = "default_water_footstep",
   name = "bottle_of_river_water",
   description = "Bottle of River Water",
+  groups = {food_water = 1},
 })
 
 bottles.register_filled_bottle({
