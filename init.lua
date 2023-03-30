@@ -141,6 +141,7 @@ bottles = {
     bottles.registered_filled_bottles[spec.name] = spec
 
     -- Register new bottle node
+    for _, v in pairs({vessel = 1, dig_immediate = 3, attached_node = 1}) do table.insert(spec.groups or {}, v) end
     minetest.register_node(spec.name,{
       description = spec.description or ("Bottle of " .. contents_node.description),
       drawtype = "plantlike",
@@ -154,7 +155,7 @@ bottles = {
         type = "fixed",
         fixed = {-0.25, -0.5, -0.25, 0.25, 0.3, 0.25}
       },
-      groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
+      groups = spec.groups,
       sounds = default.node_sound_glass_defaults(),
       on_use = bottles.spill,
     })
