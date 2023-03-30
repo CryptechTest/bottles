@@ -141,7 +141,6 @@ bottles = {
     bottles.registered_filled_bottles[spec.name] = spec
 
     -- Register new bottle node
-    for _, v in pairs({vessel = 1, dig_immediate = 3, attached_node = 1}) do table.insert(spec.groups or {}, v) end
     minetest.register_node(spec.name,{
       description = spec.description or ("Bottle of " .. contents_node.description),
       drawtype = "plantlike",
@@ -198,7 +197,7 @@ bottles.register_filled_bottle({
   sound = "default_water_footstep",
   name = "bottle_of_water",
   description = "Bottle of Water",
-  groups = {food_water = 1},
+  groups = {vessel = 1, dig_immediate = 3, attached_node = 1, food_water = 1},
 })
 
 bottles.register_filled_bottle({
@@ -206,7 +205,7 @@ bottles.register_filled_bottle({
   sound = "default_water_footstep",
   name = "bottle_of_river_water",
   description = "Bottle of River Water",
-  groups = {food_water = 1},
+  groups = {vessel = 1, dig_immediate = 3, attached_node = 1, food_water = 1},
 })
 
 bottles.register_filled_bottle({
@@ -214,26 +213,31 @@ bottles.register_filled_bottle({
   sound = "default_water_footstep",
   name = "bottle_of_lava",
   description = "Bottle of Lava",
+  groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 })
 
 bottles.register_filled_bottle({
   target = "default:sand",
   sound = "default_sand_footstep",
+  groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 })
 
 bottles.register_filled_bottle({
   target = "default:desert_sand",
   sound = "default_sand_footstep",
+  groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 })
 
 bottles.register_filled_bottle({
   target = "default:silver_sand",
   sound = "default_sand_footstep",
+  groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 })
 
 bottles.register_filled_bottle({
   target = "default:dirt",
   sound = "default_dig_crumbly",
+  groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 })
 
 bottles.register_filled_bottle({
@@ -241,6 +245,7 @@ bottles.register_filled_bottle({
   sound = "default_dig_crumbly",
   name = "bottle_of_dry_dirt",
   description = "Bottle of Dry Dirt",
+  groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 })
 
 bottles.register_filled_bottle({
@@ -248,6 +253,7 @@ bottles.register_filled_bottle({
   sound = "default_grass_footstep",
   name = "bottle_of_grass",
   description = "Bottle of Grass",
+  groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 })
 
 bottles.register_filled_bottle({
@@ -255,6 +261,7 @@ bottles.register_filled_bottle({
   sound = "default_grass_footstep",
   name = "bottle_of_dry_grass",
   description = "Bottle of Dry Grass",
+  groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 })
 
 bottles.register_filled_bottle({
@@ -262,6 +269,7 @@ bottles.register_filled_bottle({
   sound = "default_grass_footstep",
   name = "bottle_of_coniferous_litter",
   description = "Bottle of Coniferous Litter",
+  groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 })
 
 bottles.register_filled_bottle({
@@ -269,6 +277,7 @@ bottles.register_filled_bottle({
   sound = "default_grass_footstep",
   name = "bottle_of_rainforest_litter",
   description = "Bottle of Rainforest Litter",
+  groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 })
 
 bottles.register_filled_bottle({
@@ -276,14 +285,17 @@ bottles.register_filled_bottle({
   sound = "default_grass_footstep",
   name = "bottle_of_moss",
   description = "Bottle of Moss",
+  groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 })
 
 bottles.register_filled_bottle({
   target = "default:gravel",
   sound = "default_gravel_footstep",
+  groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 })
 
 bottles.register_filled_bottle({
   target = {"default:snow","default:snow_block","default:dirt_with_snow"},
   sound = "default_sand_footstep",
+  groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 })
