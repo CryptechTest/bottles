@@ -112,8 +112,9 @@ bottles = {
     else
       return false
     end
+    local modname = (spec.modname or "bottles") .. ":"
     spec.image = "[combine:16x16:0,0=" .. spec.image .. "^vessels_glass_bottle_mask.png^[makealpha:0,254,0"
-    spec.name = "bottles:" .. (spec.name or "bottle_of_" .. contents_node.name:split(":")[2])
+    spec.name = modname .. (spec.name or "bottle_of_" .. contents_node.name:split(":")[2])
 
     -- Ensure that name is not already in use, fail registration if so
     if bottles.registered_filled_bottles[spec.name] then
